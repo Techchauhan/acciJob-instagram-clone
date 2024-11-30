@@ -1,4 +1,4 @@
-import { InstagramIcon,HomeIcon, SearchIcon, ExploreIcon, ReelIcon, MessageIcon, NotificationIcon, CreateIcon,  MoreIcon } from "@/components/Icon/page"; // Assuming you have these icons
+import { InstagramIcon,HomeIcon, SearchIcon, ExploreIcon, ReelIcon, MessageIcon, NotificationIcon, CreateIcon,  MoreIcon, MyProfile } from "@/components/Icon/page"; // Assuming you have these icons
 
 const DesktopLeftNavigation = () => {
   // Menu items
@@ -10,7 +10,7 @@ const DesktopLeftNavigation = () => {
     { label: "Message", Icon: MessageIcon },
     { label: "Notification", Icon: NotificationIcon },
     { label: "Create", Icon: CreateIcon },
-    { label: "Profile", Icon: MoreIcon },
+    { label: "Profile", Icon: MyProfile },
     { label: "More", Icon: MoreIcon },
   ];
 

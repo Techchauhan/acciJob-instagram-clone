@@ -1,4 +1,5 @@
 import DesktopLeftNavigation from '@/components/Navigation/DesktopLeftNevigation';
+import RightNevigation from '@/components/Navigation/DesktopRightNevigation';
 import PostSection from '@/components/Posts/pages';
 import StorySection from '@/components/StorySection/page';
 import { Col, Row } from 'antd';
@@ -18,7 +19,9 @@ const DesktopScreen = () => (
                 </Col>
        
                  {/* Right Side Bar */}
-                <Col flex="0 1 300px">Suggestoin Area</Col>
+                <Col flex="0 1 400px"> 
+                <RightNevigation/>
+                </Col>
        </Row>
     </Col>
 

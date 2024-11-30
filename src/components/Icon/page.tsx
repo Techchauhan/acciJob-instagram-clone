@@ -1,3 +1,5 @@
+import { Avatar } from "antd";
+
 const InstagramIcon = ()=>{
 return(
     <svg width="103" height="29" viewBox="0 0 103 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -181,4 +183,10 @@ const SavedIcon = ()=>{
     );
 }
 
-export    {InstagramIcon, LikeIcon, CommentIcon, ShareIcon, SavedIcon, CreateIcon, NotificationIcon, HomeIcon, ExploreIcon, MessageIcon, MoreIcon, ReelIcon, SearchIcon, };
+const MyProfile = ()=>{
+    return(
+        <Avatar src='/images/profile.jpg'></Avatar>
+    );
+}
+
+export    {InstagramIcon, MyProfile, LikeIcon, CommentIcon, ShareIcon, SavedIcon, CreateIcon, NotificationIcon, HomeIcon, ExploreIcon, MessageIcon, MoreIcon, ReelIcon, SearchIcon, };

@@ -23,18 +23,18 @@ const PostSection = () => {
       discription: "Parabéns Ayrton, minha inspiração sempre 🇧🇷💫",
     },
     {
-        id: 3,
-        username: "discovery",
-        profileUrl: "images/user/user8.jpeg",
-        verified: false,
-        postImage: "/images/post/post3.jpeg",
-        likes: "741,368",
-        discription: "Parabéns Ayrton, minha inspiração sempre 🇧🇷💫",
-      },
+      id: 3,
+      username: "discovery",
+      profileUrl: "images/user/user8.jpeg",
+      verified: false,
+      postImage: "/images/post/post3.jpeg",
+      likes: "741,368",
+      discription: "Parabéns Ayrton, minha inspiração sempre 🇧🇷💫",
+    },
   ];
 
   return (
-    <div className="justify-center items-center ml-60 mr-60 py-2">
+    <div className="justify-center items-center ml-4 mr-4 md:ml-60 md:mr-60">
       {posts.map((post) => (
         <div key={post.id} className="p-4 rounded-lg">
           {/* Username section and three dots section start */}
@@ -51,7 +51,7 @@ const PostSection = () => {
                 />
               </div>
 
-              <h1 className="text-black">{post.username}</h1>
+              <h1 className="text-black text-sm md:text-base">{post.username}</h1>
               {post.verified && (
                 <Image
                   src="/images/verify.png"
@@ -60,7 +60,7 @@ const PostSection = () => {
                   alt="verified-user"
                 />
               )}
-              <span className="text-gray-600">5h</span>
+              <span className="text-gray-600 text-xs md:text-sm">5h</span>
             </div>
 
             {/* Dots icon */}
@@ -83,37 +83,47 @@ const PostSection = () => {
               width={1200} // Set a max width for the image
               height={800} // Set a height that maintains aspect ratio
               objectFit="cover" // Ensures the image is properly cropped and doesn't distort
-              className="rounded-lg" // Adds rounded corners to the image
+              className="rounded-lg w-full h-auto" // Ensures responsiveness
             />
           </div>
           {/* User Post Image End */}
-              
 
-              {/* LIke comment Share Section */}
-            <div className="mt-2 flex justify-between">
-                {/* first Box */}
-                <div className="flex space-x-2">
-                    <LikeIcon/>
-                    <CommentIcon/>
-                    <ShareIcon/>
-                </div>
-
-                {/* Second Box */}
-                <div>
-                    <SavedIcon/>
-                </div>
+          {/* Like comment Share Section */}
+          <div className="mt-2 flex justify-between">
+            {/* first Box */}
+            <div className="flex space-x-2">
+              <LikeIcon />
+              <CommentIcon />
+              <ShareIcon />
             </div>
 
-            {/* Number of LIkes */}
-            <div className="py-2 text-black"><h1>{post.likes} likes</h1></div>
-            {/* Discription */}
-            <div className="flex text-black space-x-2"><h1>{post.username}  </h1> <span>{post.discription}</span></div>
-            <div className=" text-black"><h1> See translation</h1></div>
-            <div className=" text-gray-400"><h1> View all 13,384 comments</h1></div>
-            <div> <p className="text-black">Add a comment...</p></div>
-            <Divider/>
+            {/* Second Box */}
+            <div>
+              <SavedIcon />
+            </div>
+          </div>
+
+          {/* Number of Likes */}
+          <div className="py-2 text-black text-sm md:text-base">
+            <h1>{post.likes} likes</h1>
+          </div>
+
+          {/* Description */}
+          <div className="flex text-black space-x-2 text-sm md:text-base">
+            <h1>{post.username} </h1>
+            <span>{post.discription}</span>
+          </div>
+          <div className="text-black text-xs md:text-sm">
+            <h1>See translation</h1>
+          </div>
+          <div className="text-gray-400 text-xs md:text-sm">
+            <h1>View all 13,384 comments</h1>
+          </div>
+          <div>
+            <p className="text-black text-xs md:text-sm">Add a comment...</p>
+          </div>
+          <Divider />
         </div>
-        
       ))}
     </div>
   );

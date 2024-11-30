@@ -13,11 +13,11 @@ const StorySection = () => {
   ];
 
   return (
-    <div className="flex overflow-x-auto space-x-4 p-4 border-b border-gray-200 pl-10 pr-10 mt-6">
+    <div className="flex overflow-x-auto space-x-4 p-4 border-b border-gray-200 mt-6">
       {stories.map((story) => (
         <div
           key={story.id}
-          className="flex flex-col items-center w-20 flex-shrink-0 relative"
+          className="flex flex-col items-center w-20 flex-shrink-0 relative space-x-2"
         >
           {/* Frame */}
           <div className="relative w-20 h-20">
