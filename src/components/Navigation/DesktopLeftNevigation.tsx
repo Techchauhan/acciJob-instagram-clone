@@ -15,7 +15,7 @@ const DesktopLeftNavigation = () => {
   ];
 
   return (
-    <div className="bg-white py-4 h-screen flex flex-col items-center">
+    <div className="bg-white py-4 h-screen flex flex-col items-center sticky top-0">
       {/* Instagram Icon */}
       <div className="flex items-center justify-center mt-8">
         <InstagramIcon />
