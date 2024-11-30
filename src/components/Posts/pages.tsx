@@ -1,5 +1,6 @@
-import { Avatar } from "antd";
+import { Avatar, Divider } from "antd";
 import Image from "next/image";
+import { CommentIcon, LikeIcon, SavedIcon, ShareIcon } from "../Icon/page";
 
 const PostSection = () => {
   const posts = [
@@ -14,19 +15,28 @@ const PostSection = () => {
     },
     {
       id: 2,
-      username: "peter_parker",
+      username: "kurzgesagt",
       profileUrl: "images/user/user3.jpeg",
       verified: false,
-      postImage: "/images/post/post1.jpeg",
+      postImage: "/images/post/post2.jpeg",
       likes: "741,368",
       discription: "Parabéns Ayrton, minha inspiração sempre 🇧🇷💫",
     },
+    {
+        id: 3,
+        username: "discovery",
+        profileUrl: "images/user/user3.jpeg",
+        verified: false,
+        postImage: "/images/post/post3.jpeg",
+        likes: "741,368",
+        discription: "Parabéns Ayrton, minha inspiração sempre 🇧🇷💫",
+      },
   ];
 
   return (
-    <div className="justify-center items-center ml-60 mr-60 py-4">
+    <div className="justify-center items-center ml-60 mr-60 py-2">
       {posts.map((post) => (
-        <div key={post.id} className="p-4 mb-4 rounded-lg">
+        <div key={post.id} className="p-4 rounded-lg">
           {/* Username section and three dots section start */}
           <div className="flex items-center justify-between">
             {/* Profile section */}
@@ -65,7 +75,7 @@ const PostSection = () => {
           </div>
           {/* Username section and three dots section end */}
 
-          {/* User Post Image */}
+          {/* User Post Image Start */}
           <div className="w-full mt-4">
             <Image
               src={post.postImage}
@@ -76,7 +86,34 @@ const PostSection = () => {
               className="rounded-lg" // Adds rounded corners to the image
             />
           </div>
+          {/* User Post Image End */}
+              
+
+              {/* LIke comment Share Section */}
+            <div className="mt-2 flex justify-between">
+                {/* first Box */}
+                <div className="flex space-x-2">
+                    <LikeIcon/>
+                    <CommentIcon/>
+                    <ShareIcon/>
+                </div>
+
+                {/* Second Box */}
+                <div>
+                    <SavedIcon/>
+                </div>
+            </div>
+
+            {/* Number of LIkes */}
+            <div className="py-2 text-black"><h1>{post.likes} likes</h1></div>
+            {/* Discription */}
+            <div className="flex text-black space-x-2"><h1>{post.username}  </h1> <span>{post.discription}</span></div>
+            <div className=" text-black"><h1> See translation</h1></div>
+            <div className=" text-gray-400"><h1> View all 13,384 comments</h1></div>
+            <div> <p className="text-black">Add a comment...</p></div>
+            <Divider/>
         </div>
+        
       ))}
     </div>
   );
