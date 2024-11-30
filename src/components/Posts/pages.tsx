@@ -16,7 +16,7 @@ const PostSection = () => {
     {
       id: 2,
       username: "kurzgesagt",
-      profileUrl: "images/user/user3.jpeg",
+      profileUrl: "images/user/user7.jpeg",
       verified: false,
       postImage: "/images/post/post2.jpeg",
       likes: "741,368",
@@ -25,7 +25,7 @@ const PostSection = () => {
     {
         id: 3,
         username: "discovery",
-        profileUrl: "images/user/user3.jpeg",
+        profileUrl: "images/user/user8.jpeg",
         verified: false,
         postImage: "/images/post/post3.jpeg",
         likes: "741,368",
